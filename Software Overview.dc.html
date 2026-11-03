@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="_ds/3shape-lighthouse-design-system-cc2087f1-924d-4146-b14e-93896d1daa3c/tokens/fonts.css">
+  <link rel="stylesheet" href="_ds/3shape-lighthouse-design-system-cc2087f1-924d-4146-b14e-93896d1daa3c/tokens/fig-tokens.css">
+  <link rel="stylesheet" href="_ds/3shape-lighthouse-design-system-cc2087f1-924d-4146-b14e-93896d1daa3c/tokens/fig-typography.css">
+  <link rel="stylesheet" href="_ds/3shape-lighthouse-design-system-cc2087f1-924d-4146-b14e-93896d1daa3c/tokens/semantic.css">
+  <link rel="stylesheet" href="_ds/3shape-lighthouse-design-system-cc2087f1-924d-4146-b14e-93896d1daa3c/tokens/typography.css">
+  <link rel="stylesheet" href="_ds/3shape-lighthouse-design-system-cc2087f1-924d-4146-b14e-93896d1daa3c/tokens/lighthouse.css">
+  <link rel="stylesheet" href="_ds/3shape-lighthouse-design-system-cc2087f1-924d-4146-b14e-93896d1daa3c/tokens/theme-globalcvi.css">
+  <link rel="stylesheet" href="_ds/3shape-lighthouse-design-system-cc2087f1-924d-4146-b14e-93896d1daa3c/styles.css">
+  <script src="_ds/3shape-lighthouse-design-system-cc2087f1-924d-4146-b14e-93896d1daa3c/_ds_bundle.js"></script>
+  <style>html,body{height:100%;margin:0;background:rgb(240,240,240)}a{color:var(--lh-primary)}a:hover{color:var(--lh-primary);text-decoration:underline}</style>
+</helmet>
+<div style="display:flex;height:100vh;background:var(--lh-grey-6);font-family:var(--lh-font);color:var(--lh-ink-high);overflow:hidden">
+
+  <sc-if value="{{ navOpen }}" hint-placeholder-val="{{ true }}">
+  <nav style="width:280px;flex-shrink:0;background:#fff;border-right:1px solid var(--lh-border);display:flex;flex-direction:column;box-sizing:border-box;overflow-y:auto">
+    <div style="height:56px;display:flex;align-items:center;gap:12px;padding:0 4px;border-bottom:1px solid var(--lh-border);box-sizing:border-box;flex-shrink:0">
+      <x-import component-from-global-scope="Ds3ShapeLighthouseDesignSystem_cc2087.IconButton" icon="ListClose24" aria-label="Collapse navigation" on-click="{{ toggleNav }}" hint-size="48px,48px"></x-import>
+      <x-import component-from-global-scope="Ds3ShapeLighthouseDesignSystem_cc2087.ShapeLogo3" hint-size="116px,24px"></x-import>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;height:72px;padding:0 8px 0 16px;border-bottom:1px solid var(--lh-border);cursor:pointer;flex-shrink:0" style-hover="background:var(--lh-hover-black)">
+      <span style="width:40px;height:40px;border:1px solid var(--lh-border);border-radius:4px;display:flex;align-items:center;justify-content:center;font:400 16px/24px var(--lh-font);color:var(--lh-ink-medium);box-sizing:border-box;flex-shrink:0">SI</span>
+      <div style="display:flex;flex-direction:column;flex-grow:1;min-width:0">
+        <span style="font:400 16px/24px var(--lh-font);letter-spacing:0.5px">Smile Inc, HQ</span>
+        <span style="font:400 14px/20px var(--lh-font);letter-spacing:0.25px;color:var(--lh-ink-medium)">Administrator</span>
+      </div>
+      <span style="display:flex;color:var(--lh-ink-medium);padding:12px">
+        <x-import component-from-global-scope="Ds3ShapeLighthouseDesignSystem_cc2087.Icon" name="CaretDown24" size="24" hint-size="24px,24px"></x-import>
+      </span>
+    </div>
+    <div style="padding:20px 16px 12px;font:400 10px/16px var(--lh-font);letter-spacing:1.5px;text-transform:uppercase;color:var(--lh-ink-medium);border-bottom:1px solid var(--lh-border)">Account</div>
+    <div style="display:flex;flex-direction:column;flex-grow:1;flex-shrink:0;padding-top:0">
+      <x-import component-from-global-scope="Ds3ShapeLighthouseDesignSystem_cc2087.NavItem" icon="Users24" label="People &amp; Teams" hint-size="100%,48px"></x-import>
+      <x-import component-from-global-scope="Ds3ShapeLighthouseDesignSystem_cc2087.NavItem" icon="Link24" label="Connections" hint-size="100%,48px"></x-import>
+      <x-import component-from-global-scope="Ds3ShapeLighthouseDesignSystem_cc2087.NavItem" icon="Download24" label="Software" active="{{ true }}" hint-size="100%,48px"></x-import>
+      <div style="display:flex;align-items:center;gap:16px;height:48px;padding:0 16px;cursor:pointer;box-sizing:border-box" style-hover="background:var(--lh-hover-black)">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color:var(--lh-ink-medium);flex-shrink:0"><path d="M3 21h18"></path><path d="M6 21V3.75h12V21"></path><path d="M10 21v-3.5h4V21"></path><path d="M9 7h1.5M13.5 7H15M9 10.5h1.5M13.5 10.5H15M9 14h1.5M13.5 14H15"></path></svg>
+        <span style="font:400 16px/24px var(--lh-font);letter-spacing:0.5px;color:var(--lh-ink-high);white-space:nowrap">Sites</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:16px;height:48px;padding:0 16px;cursor:pointer;box-sizing:border-box" style-hover="background:var(--lh-hover-black)">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color:var(--lh-ink-medium);flex-shrink:0"><path d="M2 21h20"></path><path d="M4 21V3.75h9V21"></path><path d="M13 9.75h7V21"></path><path d="M6.75 7.5h1.5M9.25 7.5h1.5M6.75 11h1.5M9.25 11h1.5M6.75 14.5h1.5M9.25 14.5h1.5"></path><path d="M15.75 13h1.5M15.75 16.5h1.5"></path><path d="M7.5 21v-3h2v3"></path></svg>
+        <span style="font:400 16px/24px var(--lh-font);letter-spacing:0.5px;color:var(--lh-ink-high);white-space:nowrap">Organization</span>
+      </div>
+    </div>
+    <div style="padding:20px 16px 12px;font:400 10px/16px var(--lh-font);letter-spacing:1.5px;text-transform:uppercase;color:var(--lh-ink-medium);border-bottom:1px solid var(--lh-border)">Application</div>
+    <div style="display:flex;flex-direction:column;padding-bottom:8px">
+      <x-import component-from-global-scope="Ds3ShapeLighthouseDesignSystem_cc2087.NavItem" icon="FileText24" label="Terms &amp; Conditions" hint-size="100%,48px"></x-import>
+      <x-import component-from-global-scope="Ds3ShapeLighthouseDesignSystem_cc2087.NavItem" icon="Settings24" label="Settings" hint-size="100%,48px"></x-import>
+    </div>
+  </nav>
+  </sc-if>
+  <sc-if value="{{ navRail }}" hint-placeholder-val="{{ false }}">
+  <nav style="width:64px;flex-shrink:0;background:#fff;border-right:1px solid var(--lh-border);display:flex;flex-direction:column;box-sizing:border-box;overflow-y:auto;overflow-x:hidden">
+    <div style="height:56px;display:flex;align-items:center;justify-content:center;border-bottom:1px solid var(--lh-border);box-sizing:border-box;flex-shrink:0">
+      <x-import component-from-global-scope="Ds3ShapeLighthouseDesignSystem_cc2087.IconButton" icon="List24" aria-label="Expand navigation" on-click="{{ toggleNav }}" hint-size="48px,48px"></x-import>
+    </div>
+    <div data-tip="Switch &quot;Smile Inc, HQ&quot; site" onMouseEnter="{{ railTipEnter }}" onMouseLeave="{{ railTipLeave }}" style="display:flex;align-items:center;justify-content:center;height:72px;border-bottom:1px solid var(--lh-border);cursor:pointer;flex-shrink:0" style-hover="background:var(--lh-hover-black)">
+      <span style="width:40px;height:40px;border:1px solid var(--lh-border);border-radius:4px;display:flex;align-items:center;justify-content:center;font:400 16px/24px var(--lh-font);color:var(--lh-ink-medium);box-sizing:border-box">SI</span>
+    </div>
+    <div style="height:48px;border-bottom:1px solid var(--lh-border);flex-shrink:0"></div>
+    <div style="display:flex;flex-direction:column;flex-grow:1;flex-shrink:0">
+      <div data-tip="People &amp; Teams" onMouseEnter="{{ railTipEnter }}" onMouseLeave="{{ railTipLeave }}" style="display:flex;align-items:center;justify-content:center;height:48px;cursor:pointer;color:var(--lh-ink-medium);background:transparent" style-hover="background:var(--lh-hover-black)">
+        <x-import component-from-global-scope="Ds3ShapeLighthouseDesignSystem_cc2087.Icon" name="Users24" size="24" hint-size="24px,24px"></x-import>
+      </div>
+      <div data-tip="Connections" onMouseEnter="{{ railTipEnter }}" onMouseLeave="{{ railTipLeave }}" style="display:flex;align-items:center;justify-content:center;height:48px;cursor:pointer;color:var(--lh-ink-medium);background:transparent" style-hover="background:var(--lh-hover-black)">
+        <x-import component-from-global-scope="Ds3ShapeLighthouseDesignSystem_cc2087.Icon" name="Link24" size="24" hint-size="24px,24px"></x-import>
+      </div>
+      <div data-tip="Software" onMouseEnter="{{ railTipEnter }}" onMouseLeave="{{ railTipLeave }}" style="display:flex;align-items:center;justify-content:center;height:48px;cursor:pointer;color:var(--lh-primary);background:color-mix(in srgb, var(--lh-primary) 12%, transparent)" style-hover="background:color-mix(in srgb, var(--lh-primary) 16%, transparent)">
+        <x-import component-from-global-scope="Ds3ShapeLighthouseDesignSystem_cc2087.Icon" name="Download24" size="24" hint-size="24px,24px"></x-import>
+      </div>
+      <div data-tip="Sites" onMouseEnter="{{ railTipEnter }}" onMouseLeave="{{ railTipLeave }}" style="display:flex;align-items:center;justify-content:center;height:48px;cursor:pointer;color:var(--lh-ink-medium);background:transparent" style-hover="background:var(--lh-hover-black)">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21h18"></path><path d="M6 21V3.75h12V21"></path><path d="M10 21v-3.5h4V21"></path><path d="M9 7h1.5M13.5 7H15M9 10.5h1.5M13.5 10.5H15M9 14h1.5M13.5 14H15"></path></svg>
+      </div>
+      <div data-tip="Organization" onMouseEnter="{{ railTipEnter }}" onMouseLeave="{{ railTipLeave }}" style="display:flex;align-items:center;justify-content:center;height:48px;cursor:pointer;color:var(--lh-ink-medium);background:transparent" style-hover="background:var(--lh-hover-black)">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 21h20"></path><path d="M4 21V3.75h9V21"></path><path d="M13 9.75h7V21"></path><path d="M6.75 7.5h1.5M9.25 7.5h1.5M6.75 11h1.5M9.25 11h1.5M6.75 14.5h1.5M9.25 14.5h1.5"></path><path d="M15.75 13h1.5M15.75 16.5h1.5"></path><path d="M7.5 21v-3h2v3"></path></svg>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;padding-bottom:8px;border-top:1px solid var(--lh-border)">
+      <div data-tip="Terms &amp; Conditions" onMouseEnter="{{ railTipEnter }}" onMouseLeave="{{ railTipLeave }}" style="display:flex;align-items:center;justify-content:center;height:48px;cursor:pointer;color:var(--lh-ink-medium);background:transparent" style-hover="background:var(--lh-hover-black)">
+        <x-import component-from-global-scope="Ds3ShapeLighthouseDesignSystem_cc2087.Icon" name="FileText24" size="24" hint-size="24px,24px"></x-import>
+      </div>
+      <div data-tip="Settings" onMouseEnter="{{ railTipEnter }}" onMouseLeave="{{ railTipLeave }}" style="display:flex;align-items:center;justify-content:center;height:48px;cursor:pointer;color:var(--lh-ink-medium);background:transparent" style-hover="background:var(--lh-hover-black)">
+        <x-import component-from-global-scope="Ds3ShapeLighthouseDesignSystem_cc2087.Icon" name="Settings24" size="24" hint-size="24px,24px"></x-import>
+      </div>
+    </div>
+  </nav>
+  </sc-if>
+  <sc-if value="{{ railTip.show }}" hint-placeholder-val="{{ false }}">
+    <span style="position:fixed;top:{{ railTip.top }};left:{{ railTip.left }};z-index:80;max-width:200px;padding:4px 8px;border-radius:4px;background:var(--lh-ink-medium);color:#fff;font:400 12px/16px var(--lh-font);letter-spacing:0.4px;pointer-events:none;text-wrap:pretty">{{ railTip.text }}</span>
+  </sc-if>
+
+  <div style="display:flex;flex-direction:column;flex-grow:1;min-width:0">
+    <header style="height:56px;flex-shrink:0;display:flex;align-items:center;background:#fff;border-bottom:1px solid var(--lh-border);padding:0 8px 0 16px;box-sizing:border-box">
+      <span style="font:500 20px/24px var(--lh-font);letter-spacing:0.15px;flex-grow:1">Software</span>
+      <sc-if value="{{ progress.showIcon }}" hint-placeholder-val="{{ false }}">
+        <span data-update-icon="1" style="margin-right:8px;display:flex">
+          <x-import component-from-global-scope="Ds3ShapeLighthouseDesignSystem_cc2087.IconButton" icon="Refresh24" badge="{{ progress.badge }}" active="{{ progress.popOpen }}" aria-label="Updating version" on-click="{{ progress.togglePop }}" hint-size="48px,48px"></x-import>
+        </span>
+      </sc-if>
+      <span style="width:1px;height:40px;background:var(--lh-border);margin-right:16px"></span>
+      <div style="display:flex;align-items:center;gap:8px;cursor:pointer;padding:4px 8px;border-radius:4px" style-hover="background:var(--lh-hover-black)">
+        <x-import component-from-global-scope="Ds3ShapeLighthouseDesignSystem_cc2087.LeadingElement" type="monogram" monogram="BS" hint-size="40px,40px"></x-import>
+        <div style="display:flex;flex-direction:column;padding-right:8px">
+          <span style="font:400 14px/20px var(--lh-font);letter-spacing:0.25px">Bob Smith</span>
+          <span style="font:400 12px/16px var(--lh-font);letter-spacing:0.4px;color:var(--lh-ink-medium)">bobsmith@smileinc.com</span>
+        </div>
+        <span style="display:flex;color:var(--lh-ink-medium)">
+          <x-import component-from-global-scope="Ds3ShapeLighthouseDesignSystem_cc2087.Icon" name="CaretDown24" size="24" hint-size="24px,24px"></x-import>
+        </span>
+      </div>
+    </header>
+
+    <div style="display:flex;flex-grow:1;min-height:0">
+    <main style="flex-grow:1;min-width:0;overflow:hidden;padding:0 16px 16px;display:flex;flex-direction:column;gap:4px">
+      <div style="display:flex;align-items:center;gap:8px;min-height:56px;flex-wrap:wrap;flex-shrink:0">
+        <sc-for list="{{ chips }}" as="chip" hint-placeholder-count="3">
+          <x-import component-from-global-scope="Ds3ShapeLighthouseDesignSystem_cc2087.Chip" kind="filter" active="{{ chip.active }}" on-click="{{ chip.onClick }}" hint-size="120px,32px">{{ chip.label }}</x-import>
+        </sc-for>
+        <span style="flex-grow:1"></span>
+        <x-import component-from-global-scope="Ds3ShapeLighthouseDesignSystem_cc2087.Button" variant="text-le" leading-icon="MagnifyGlass24" hint-size="110px,36px">Search</x-import>
+        <x-import component-from-global-scope="Ds3ShapeLighthouseDesignSystem_cc2087.Button" variant="text-le" leading-icon="Funnel24" hint-size="100px,36px">Filter</x-import>
+      </div>
+
+      <section style="background:#fff;border:1px solid var(--lh-border);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;flex:1 1 auto;min-height:0">
+        <sc-if value="{{ notSelecting }}" hint-placeholder-val="{{ true }}">
+          <h2 style="margin:0;flex-shrink:0;padding:20px 16px;font:500 20px/24px var(--lh-font);letter-spacing:0.15px;border-bottom:1px solid var(--lh-border)">Software version overview</h2>
+        </sc-if>
+        <sc-if value="{{ selecting }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex;align-items:center;gap:8px;flex-shrink:0;min-height:64px;padding:0 16px 0 8px;background:color-mix(in srgb, var(--lh-primary) 12%, #fff);border-bottom:2px solid var(--lh-primary);box-sizing:border-box">
+            <x-import component-from-global-scope="Ds3ShapeLighthouseDesignSystem_cc2087.IconButton" icon="Close24" aria-label="Clear selection" on-click="{{ clearSelection }}" hint-size="48px,48px"></x-import>
+            <span style="font:500 20px/24px var(--lh-font);letter-spacing:0.15px;color:var(--lh-ink-high)">{{ selLabel }}</span>
+            <sc-if value="{{ selFail.show }}" hint-placeholder-val="{{ false }}">
+              <span style="display:flex;align-items:center;gap:8px;margin-left:8px;color:var(--lh-error);font:400 14px/20px var(--lh-font);letter-spacing:0.25px">
+                <x-import component-from-global-scope="Ds3ShapeLighthouseDesignSystem_cc2087.Icon" name="Exclamation24" size="20" hint-size="20px,20px"></x-import>
+                {{ selFail.text }}
+              </span>
+              <x-import component-from-global-scope="Ds3ShapeLighthouseDesignSystem_cc2087.Button" variant="text" on-click="{{ selFail.onView }}" hint-size="80px,36px">View details</x-import>
+            </sc-if>
+            <span style="flex-grow:1"></span>
+            <x-import component-from-global-scope="Ds3ShapeLighthouseDesignSystem_cc2087.Button" variant="outlined" leading-icon="Faders24" on-click="{{ manageSelected }}" style="background:#fff" hint-size="160px,36px">Manage sites</x-import>
+          </div>
+        </sc-if>
+        <div onScroll="{{ hideTip }}" style="overflow:auto;flex:1 1 auto;min-height:0">
+          <div style="min-width:1380px;font:400 14px/20px var(--lh-font);letter-spacing:0.25px">
+            <div style="display:grid;grid-template-columns:minmax(440px,1.3fr) 140px 128px minmax(300px,2fr) 280px 180px 56px;align-items:center;height:56px;position:sticky;top:0;z-index:3;background:#fff;border-bottom:1px solid var(--lh-border);font:500 14px/20px var(--lh-font);color:var(--lh-ink-high)">
+              <div style="display:flex;align-items:center;padding-left:4px">
+                <x-import component-from-global-scope="Ds3ShapeLighthouseDesignSystem_cc2087.Checkbox" checked="{{ allChecked }}" indeterminate="{{ allIndeterminate }}" on-change="{{ toggleAll }}" hint-size="48px,48px"></x-import>
+                <span style="padding-left:4px">Site</span>
+              </div>
+              <span style="padding:0 16px 0 0">Country</span>
+              <span style="padding:0 16px 0 0">Version control</span>
+              <div data-ver-col="1" style="padding-right:16px;min-width:0">Software version</div>
+              <span style="padding-right:16px">Status</span>
+              <span style="padding-right:16px">Date</span>
+              <span style="position:sticky;right:0;align-self:stretch;background:#fff;z-index:1"></span>
+            </div>
+            <sc-for list="{{ rows }}" as="row" hint-placeholder-count="12">
+              <div style="display:grid;grid-template-columns:minmax(440px,1.3fr) 140px 128px minmax(300px,2fr) 280px 180px 56px;align-items:center;min-height:{{ rowHeight }};border-bottom:1px solid var(--lh-border);background:{{ row.bg }};box-sizing:border-box;cursor:pointer" onClick="{{ row.onRowClick }}" style-hover="background:{{ row.hoverBg }}">
+                <div style="display:flex;align-items:center;padding-left:4px;min-width:0">
+                  <span style="width:{{ row.indent }};flex-shrink:0"></span>
+                  <sc-if value="{{ row.hasChildren }}" hint-placeholder-val="{{ false }}">
+                    <x-import component-from-global-scope="Ds3ShapeLighthouseDesignSystem_cc2087.IconButton" icon="{{ row.caret }}" on-click="{{ row.onToggle }}" hint-size="48px,48px"></x-import>
+                  </sc-if>
+                  <sc-if value="{{ row.isLeaf }}" hint-placeholder-val="{{ true }}">
+                    <span style="width:48px;flex-shrink:0"></span>
+                  </sc-if>
+                  <sc-if value="{{ row.selectable }}" hint-placeholder-val="{{ true }}">
+                    <x-import component-from-global-scope="Ds3ShapeLighthouseDesignSystem_cc2087.Checkbox" checked="{{ row.checked }}" indeterminate="{{ row.indeterminate }}" disabled="{{ row.locked }}" on-change="{{ row.onCheck }}" hint-size="48px,48px"></x-import>
+                  </sc-if>
+                  <sc-if value="{{ row.notSelectable }}" hint-placeholder-val="{{ false }}">
+                    <span style="width:48px;flex-shrink:0"></span>
+                  </sc-if>
+                  <span style="width:40px;height:40px;border:1px solid var(--lh-border);border-radius:4px;display:flex;align-items:center;justify-content:center;font:400 16px/24px var(--lh-font);color:var(--lh-ink-high);background:#fff;box-sizing:border-box;flex-shrink:0;margin-left:4px">{{ row.initials }}</span>
+                  <div style="display:flex;flex-direction:column;padding:6px 16px 6px 12px;min-width:0">
+                    <span style="font:400 16px/24px var(--lh-font);letter-spacing:0.5px;color:var(--lh-ink-high);white-space:nowrap">{{ row.name }}</span>
+                    <sc-if value="{{ row.hasChildren }}" hint-placeholder-val="{{ false }}">
+                      <span style="font:400 14px/20px var(--lh-font);letter-spacing:0.25px;color:var(--lh-ink-medium)">{{ row.childLabel }}</span>
+                    </sc-if>
+                  </div>
+                </div>
+                <span style="padding-right:16px">{{ row.country }}</span>
+                <span style="padding-right:16px">{{ row.vc }}</span>
+                <div style="padding-right:48px;min-width:0;display:flex">
+                  <span onMouseEnter="{{ row.onVerEnter }}" onMouseLeave="{{ hideTip }}" style="display:flex;gap:4px;min-width:0;white-space:nowrap;cursor:default"><span style="overflow:hidden;text-overflow:ellipsis;min-width:0">{{ row.versionBase }}</span><span style="flex-shrink:0">{{ row.versionMore }}</span></span>
+                </div>
+                <div style="display:flex;flex-direction:column;align-items:flex-start;gap:2px;padding-right:16px">
+                  <sc-if value="{{ row.locked }}" hint-placeholder-val="{{ false }}">
+                    <span style="display:flex;align-items:center;gap:8px;color:var(--lh-ink-medium)">
+                      <x-import component-from-global-scope="Ds3ShapeLighthouseDesignSystem_cc2087.ProgressCircular" size="16" hint-size="16px,16px"></x-import>
+                      Updating…
+                    </span>
+                  </sc-if>
+                  <sc-if value="{{ row.hasStatus }}" hint-placeholder-val="{{ false }}">
+                    <x-import component-from-global-scope="Ds3ShapeLighthouseDesignSystem_cc2087.Label" status="{{ row.statusKind }}" small="{{ true }}" hint-size="120px,16px">{{ row.status }}</x-import>
+                  </sc-if>
+                  <sc-if value="{{ row.hasStatusNote }}" hint-placeholder-val="{{ false }}">
+                    <span style="display:flex;align-items:center;gap:4px;white-space:nowrap">
+                      <span onMouseEnter="{{ row.onPendEnter }}" onMouseLeave="{{ hideTip }}" style="cursor:default">{{ row.statusNote }}</span>
+                      <sc-if value="{{ row.waitCmd }}" hint-placeholder-val="{{ false }}">
+                        <span title="Waiting for command line" aria-label="Waiting for command line" style="display:flex;color:var(--lh-ink-medium);cursor:default">
+                          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"></rect><path d="M7 9l3 3-3 3"></path><path d="M12 15h5"></path></svg>
+                        </span>
+                      </sc-if>
+                    </span>
+                  </sc-if>
+                </div>
+                <span style="padding-right:16px;color:{{ row.dateColor }}">{{ row.date }}</span>
+                <div style="position:sticky;right:0;z-index:1;align-self:stretch;display:flex;align-items:center;justify-content:center;background:inherit">
+                  <x-import component-from-global-scope="Ds3ShapeLighthouseDesignSystem_cc2087.IconButton" icon="DotsThreeVertical24" disabled="{{ row.locked }}" active="{{ row.menuOpen }}" on-click="{{ row.onMenu }}" hint-size="48px,48px"></x-import>
+                </div>
+              </div>
+            </sc-for>
+            <div style="height:24px"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <sc-if value="{{ sheet.show }}" hint-placeholder-val="{{ false }}">
+      <x-import component-from-global-scope="Ds3ShapeLighthouseDesignSystem_cc2087.SideSheet" title="Current software version" width="{{ sheet.width }}" on-close="{{ closeSheet }}" footer="{{ sheet.footer }}" style="flex-shrink:0;height:100%" hint-size="400px,100%">
+        <div style="width:100%;max-width:100%;overflow-x:clip">
+        <div style="padding:16px;font:400 16px/24px var(--lh-font);letter-spacing:0.5px;border-bottom:1px solid var(--lh-border)">Re: {{ sheet.name }}</div>
+        <sc-if value="{{ sheet.multiCountry }}" hint-placeholder-val="{{ false }}">
+          <div style="padding:16px 16px 8px;font:400 10px/16px var(--lh-font);letter-spacing:1.5px;text-transform:uppercase;color:var(--lh-ink-medium);border-bottom:1px solid var(--lh-border)">Country</div>
+          <div style="padding:12px 16px 0">
+            <x-import component-from-global-scope="Ds3ShapeLighthouseDesignSystem_cc2087.Callout" mode="default" icon="{{ false }}" hint-size="100%,72px"><div style="display:flex;align-items:flex-start;gap:16px"><span style="display:flex;flex-shrink:0;color:var(--lh-ink-high);opacity:0.6"><x-import component-from-global-scope="Ds3ShapeLighthouseDesignSystem_cc2087.Icon" name="Info24" size="{{ 24 }}" hint-size="24px,24px"></x-import></span><span style="padding-top:2px">{{ sheet.countryIntro }}</span></div></x-import>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;padding:12px 16px 16px;border-bottom:1px solid var(--lh-border)">
+            <sc-for list="{{ sheet.countries }}" as="c" hint-placeholder-count="3">
+              <x-import component-from-global-scope="Ds3ShapeLighthouseDesignSystem_cc2087.Chip" kind="{{ c.kind }}" active="{{ c.active }}" disabled="{{ c.done }}" on-click="{{ c.onPick }}" hint-size="120px,32px">{{ c.chipLabel }}</x-import>
+            </sc-for>
+          </div>
+        </sc-if>
+        <div style="padding:16px 16px 8px;font:400 10px/16px var(--lh-font);letter-spacing:1.5px;text-transform:uppercase;color:var(--lh-ink-medium);border-bottom:1px solid var(--lh-border)">Settings</div>
+        <div style="display:flex;align-items:flex-start;gap:16px;padding:16px;border-bottom:1px solid var(--lh-border)">
+          <div style="display:flex;flex-direction:column;flex-grow:1;min-width:0">
+            <span style="font:400 16px/24px var(--lh-font);letter-spacing:0.5px;color:var(--lh-ink-high)">Software version control</span>
+            <span style="font:400 14px/20px var(--lh-font);letter-spacing:0.25px;color:var(--lh-ink-medium);text-wrap:pretty">Choose which software version your sites run. When off, we update your sites to the latest version automatically.</span>
+          </div>
+          <sc-if value="{{ sheet.vcMixed }}" hint-placeholder-val="{{ false }}">
+            <x-import component-from-global-scope="Ds3ShapeLighthouseDesignSystem_cc2087.Checkbox" indeterminate="{{ true }}" checked="{{ false }}" on-change="{{ sheet.onVc }}" hint-size="48px,48px"></x-import>
+          </sc-if>
+          <sc-if value="{{ sheet.vcNotMixed }}" hint-placeholder-val="{{ true }}">
+            <x-import component-from-global-scope="Ds3ShapeLighthouseDesignSystem_cc2087.ToggleSwitch" on="{{ sheet.vcOn }}" on-change="{{ sheet.onVc }}" hint-size="52px,48px"></x-import>
+          </sc-if>
+        </div>
+        <sc-if value="{{ sheet.vcMixed }}" hint-placeholder-val="{{ false }}">
+          <div style="padding: 0 16px 16px; border-bottom: 1px solid var(--lh-border); padding-top: 16px">
+            <x-import component-from-global-scope="Ds3ShapeLighthouseDesignSystem_cc2087.Callout" mode="default" icon="{{ false }}" hint-size="100%,72px"><div style="display:flex;align-items:flex-start;gap:16px"><span style="display:flex;flex-shrink:0;color:var(--lh-ink-high);opacity:0.6"><x-import component-from-global-scope="Ds3ShapeLighthouseDesignSystem_cc2087.Icon" name="Info24" size="{{ 24 }}" hint-size="24px,24px"></x-import></span><span style="padding-top:2px">Selected sites have different version control settings. Changing this setting applies it to all selected sites.</span></div></x-import>
+          </div>
+        </sc-if>
+        <sc-if value="{{ sheet.showCurrentOnly }}" hint-placeholder-val="{{ true }}">
+        <div style="display:flex;align-items:center;padding:0 4px 0 16px;border-bottom:1px solid var(--lh-border)">
+          <span style="flex-grow:1;font:400 10px/16px var(--lh-font);letter-spacing:1.5px;text-transform:uppercase;color:var(--lh-ink-medium)">Current version</span>
+          <span onMouseEnter="{{ addTipEnter }}" onMouseLeave="{{ addTipLeave }}" style="position:relative;display:flex">
+            <x-import component-from-global-scope="Ds3ShapeLighthouseDesignSystem_cc2087.IconButton" icon="Plus24" aria-label="{{ sheet.addTipText }}" disabled="{{ sheet.vcOff }}" on-click="{{ sheet.onAdd }}" hint-size="48px,48px"></x-import>
+            <sc-if value="{{ addTipShow }}" hint-placeholder-val="{{ false }}">
+              <span style="position:absolute;top:calc(100% + 2px);right:0;z-index:5;background:var(--lh-ink-medium);color:#fff;font:400 14px/20px var(--lh-font);letter-spacing:0.25px;padding:2px 8px;border-radius:4px;white-space:nowrap;pointer-events:none">{{ sheet.addTipText }}</span>
+            </sc-if>
+          </span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:16px;padding:16px">
+          <sc-for list="{{ sheet.products }}" as="p" hint-placeholder-count="8">
+            <div style="display:flex;flex-direction:column;padding:12px 16px 8px;border-bottom:1px solid var(--lh-ink-medium);min-width:0">
+              <span style="font:400 12px/16px var(--lh-font);letter-spacing:0.4px;color:var(--lh-ink-medium);overflow:hidden;text-overflow:ellipsis;white-space:nowrap">{{ p.name }}</span>
+              <span style="font:400 16px/24px var(--lh-font);letter-spacing:0.5px;color:var(--lh-ink-high)">{{ p.version }}</span>
+            </div>
+          </sc-for>
+        </div>
+        </sc-if>
+        <sc-if value="{{ sheet.pending }}" hint-placeholder-val="{{ false }}">
+        <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:32px;align-items:center;min-height:48px;padding:0 16px;border-bottom:1px solid var(--lh-border)">
+          <span style="font:400 10px/16px var(--lh-font);letter-spacing:1.5px;text-transform:uppercase;color:var(--lh-ink-medium)">Current version</span>
+          <span style="display:flex;align-items:center;gap:8px;font:400 10px/16px var(--lh-font);letter-spacing:1.5px;text-transform:uppercase;color:var(--lh-ink-medium)">Pending version</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:16px;padding:16px">
+          <sc-for list="{{ sheet.pendingRows }}" as="p" hint-placeholder-count="8">
+            <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:32px">
+              <div style="display:flex;flex-direction:column;padding:12px 16px 8px;border-bottom:1px solid var(--lh-ink-medium);min-width:0">
+                <span style="font:400 12px/16px var(--lh-font);letter-spacing:0.4px;color:var(--lh-ink-medium);overflow:hidden;text-overflow:ellipsis;white-space:nowrap">{{ p.name }}</span>
+                <span style="font:400 16px/24px var(--lh-font);letter-spacing:0.5px;color:var(--lh-ink-high)">{{ p.version }}</span>
+              </div>
+              <div style="display:flex;flex-direction:column;padding:12px 16px 8px;border-bottom:1px solid var(--lh-ink-medium);min-width:0">
+                <span style="font:400 12px/16px var(--lh-font);letter-spacing:0.4px;color:var(--lh-ink-medium);overflow:hidden;text-overflow:ellipsis;white-space:nowrap">{{ p.name }}</span>
+                <span style="font:400 16px/24px var(--lh-font);letter-spacing:0.5px;color:var(--lh-ink-high)">{{ p.pendingVersion }}</span>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+        </sc-if>
+        <sc-if value="{{ sheet.adding }}" hint-placeholder-val="{{ false }}">
+        <div style="position:relative;display:grid;grid-template-columns:{{ sheet.cols }};column-gap:32px;align-items:center;min-height:48px;padding:0 16px;border-bottom:1px solid var(--lh-border)">
+          <sc-if value="{{ sheet.single }}" hint-placeholder-val="{{ true }}">
+          <span style="font:400 10px/16px var(--lh-font);letter-spacing:1.5px;text-transform:uppercase;color:var(--lh-ink-medium)">Current version</span>
+          <span style="font:400 10px/16px var(--lh-font);letter-spacing:1.5px;text-transform:uppercase;color:var(--lh-ink-medium)">New version</span>
+          </sc-if>
+          <sc-if value="{{ sheet.multi }}" hint-placeholder-val="{{ false }}">
+          <span style="font:400 10px/16px var(--lh-font);letter-spacing:1.5px;text-transform:uppercase;color:var(--lh-ink-medium)">Preferred software version</span>
+          </sc-if>
+          <sc-if value="{{ sheet.single }}" hint-placeholder-val="{{ true }}">
+          <x-import component-from-global-scope="Ds3ShapeLighthouseDesignSystem_cc2087.IconButton" icon="Close24" aria-label="Remove new version" on-click="{{ sheet.onRemove }}" style="position:absolute;right:4px;top:0" hint-size="48px,48px"></x-import>
+          </sc-if>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:16px;padding:16px">
+          <sc-for list="{{ sheet.products }}" as="p" hint-placeholder-count="8">
+            <div data-dd="{{ p.name }}" style="display:grid;grid-template-columns:{{ sheet.cols }};column-gap:32px;align-items:start">
+              <sc-if value="{{ sheet.single }}" hint-placeholder-val="{{ true }}">
+              <div style="display:flex;flex-direction:column;padding:12px 16px 8px;border-bottom:1px solid var(--lh-ink-medium);min-width:0">
+                <span style="font:400 12px/16px var(--lh-font);letter-spacing:0.4px;color:var(--lh-ink-medium);overflow:hidden;text-overflow:ellipsis;white-space:nowrap">{{ p.name }}</span>
+                <span style="font:400 16px/24px var(--lh-font);letter-spacing:0.5px;color:var(--lh-ink-high)">{{ p.version }}</span>
+              </div>
+              </sc-if>
+              <div style="position:relative;min-width:0">
+                <sc-if value="{{ p.nameTipShow }}" hint-placeholder-val="{{ false }}">
+                  <span style="position:absolute;bottom:calc(100% + 4px);left:0;z-index:11;background:var(--lh-ink-medium);color:#fff;font:400 14px/20px var(--lh-font);letter-spacing:0.25px;padding:2px 8px;border-radius:4px;white-space:nowrap;pointer-events:none">{{ p.tipText }}</span>
+                </sc-if>
+                <div onClick="{{ p.onToggle }}" onMouseEnter="{{ p.nameTipEnter }}" onMouseLeave="{{ nameTipLeave }}" style="cursor:{{ p.cursor }}">
+                  <x-import component-from-global-scope="Ds3ShapeLighthouseDesignSystem_cc2087.TextField" label="{{ p.fieldLabel }}" value="{{ p.newVal }}" disabled="{{ p.disabled }}" trailing-icon="{{ p.caret }}" dc-props="{{ p.fieldProps }}" style="width:100%;min-width:0" hint-size="100%,56px"></x-import>
+                </div>
+                <sc-if value="{{ p.open }}" hint-placeholder-val="{{ false }}">
+                  <div onClick="{{ closeDropdown }}" style="position:fixed;inset:0;z-index:9"></div>
+                  <div style="position:fixed;left:{{ p.ddLeft }};top:{{ p.ddTop }};width:{{ p.ddWidth }};z-index:10">
+                    <x-import component-from-global-scope="Ds3ShapeLighthouseDesignSystem_cc2087.Menu" dropdown="{{ p.ddDown }}" width="100%" hint-size="100%,144px">
+                      <sc-for list="{{ p.opts }}" as="o" hint-placeholder-count="3">
+                        <x-import component-from-global-scope="Ds3ShapeLighthouseDesignSystem_cc2087.MenuItem" selected="{{ o.selected }}" on-click="{{ o.onPick }}" hint-size="100%,48px">
+                          <span style="display:flex;align-items:center;justify-content:space-between;gap:8px;width:100%">
+                            <span>{{ o.label }}</span>
+                            <sc-if value="{{ o.silent }}" hint-placeholder-val="{{ false }}">
+                              <span onMouseEnter="{{ o.tipEnter }}" onMouseLeave="{{ silentTipLeave }}" aria-label="Updates silently" style="position:relative;display:flex;color:var(--lh-ink-medium)">
+                                <x-import component-from-global-scope="Ds3ShapeLighthouseDesignSystem_cc2087.Icon" name="Refresh24" size="20" hint-size="20px,20px"></x-import>
+                                <sc-if value="{{ o.tipShow }}" hint-placeholder-val="{{ false }}">
+                                  <span style="position:absolute;top:50%;right:calc(100% + 8px);transform:translateY(-50%);z-index:12;background:var(--lh-ink-medium);color:#fff;font:400 14px/20px var(--lh-font);letter-spacing:0.25px;padding:2px 8px;border-radius:4px;white-space:nowrap;pointer-events:none">Updates silently</span>
+                                </sc-if>
+                              </span>
+                            </sc-if>
+                          </span>
+                        </x-import>
+                      </sc-for>
+                    </x-import>
+                  </div>
+                </sc-if>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+        <sc-if value="{{ sheet.showMethod }}" hint-placeholder-val="{{ false }}">
+        <div data-dd="__method" style="border-top:1px solid var(--lh-border);background:{{ methodBg }};transition:background 700ms ease">
+          <div style="padding:16px 16px 8px;font:400 10px/16px var(--lh-font);letter-spacing:1.5px;text-transform:uppercase;color:var(--lh-ink-medium);border-bottom:1px solid var(--lh-border)">Update method</div>
+          <div style="padding:12px 16px 4px">
+            <x-import component-from-global-scope="Ds3ShapeLighthouseDesignSystem_cc2087.Callout" mode="default" icon="{{ false }}" hint-size="100%,72px"><div style="display:flex;align-items:flex-start;gap:16px"><span style="display:flex;flex-shrink:0;color:var(--lh-ink-high);opacity:0.6"><x-import component-from-global-scope="Ds3ShapeLighthouseDesignSystem_cc2087.Icon" name="Info24" size="{{ 24 }}" hint-size="24px,24px"></x-import></span><span style="padding-top:2px;text-wrap:pretty">{{ sheet.methodIntro }}</span></div></x-import>
+          </div>
+          <div style="display:flex;flex-direction:column;padding:4px 8px 16px">
+            <div onClick="{{ sheet.toggleCmd }}" style="display:flex;align-items:flex-start;gap:4px;cursor:pointer;border-radius:4px;padding-right:8px" style-hover="background:var(--lh-hover-black)">
+              <x-import component-from-global-scope="Ds3ShapeLighthouseDesignSystem_cc2087.Checkbox" checked="{{ sheet.waitCmd }}" hint-size="48px,48px"></x-import>
+              <div style="display:flex;flex-direction:column;padding:12px 0">
+                <span style="font:400 16px/24px var(--lh-font);letter-spacing:0.5px;color:var(--lh-ink-high)">Wait for command line</span>
+                <span style="font:400 14px/20px var(--lh-font);letter-spacing:0.25px;color:var(--lh-ink-medium);text-wrap:pretty">Silent updates install only when triggered from the command line.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        </sc-if>
+        </sc-if>
+        </div>
+      </x-import>
+    </sc-if>
+    </div>
+  </div>
+  <sc-if value="{{ progress.popShow }}" hint-placeholder-val="{{ false }}">
+    <div style="position:fixed;top:60px;right:{{ progress.right }};z-index:60;width:380px;max-width:calc(100vw - 32px);display:flex;flex-direction:column;padding:8px 0;background:#fff;border-radius:4px;box-shadow:var(--lh-elev-8);box-sizing:border-box">
+      <sc-for list="{{ progress.items }}" as="it" hint-placeholder-count="1">
+        <div onClick="{{ it.onClick }}" style="display:flex;align-items:center;gap:24px;padding:12px 24px;cursor:{{ it.cursor }}" style-hover="background:{{ it.hoverBg }}">
+          <span style="display:flex;color:var(--lh-ink-medium)">
+            <x-import component-from-global-scope="Ds3ShapeLighthouseDesignSystem_cc2087.Icon" name="Refresh24" size="24" hint-size="24px,24px"></x-import>
+          </span>
+          <div style="display:flex;flex-direction:column;flex-grow:1;min-width:0">
+            <span style="font:400 16px/24px var(--lh-font);letter-spacing:0.5px;color:var(--lh-ink-high)">{{ it.title }}</span>
+            <span style="font:400 14px/20px var(--lh-font);letter-spacing:0.25px;color:var(--lh-ink-medium)">{{ it.sub }}</span>
+          </div>
+          <sc-if value="{{ it.running }}" hint-placeholder-val="{{ true }}">
+            <x-import component-from-global-scope="Ds3ShapeLighthouseDesignSystem_cc2087.ProgressCircular" size="24" hint-size="24px,24px"></x-import>
+          </sc-if>
+          <sc-if value="{{ it.ok }}" hint-placeholder-val="{{ false }}">
+            <span style="display:flex;color:var(--lh-success)">
+              <x-import component-from-global-scope="Ds3ShapeLighthouseDesignSystem_cc2087.Icon" name="CheckmarkCircle24" size="24" hint-size="24px,24px"></x-import>
+            </span>
+          </sc-if>
+          <sc-if value="{{ it.failed }}" hint-placeholder-val="{{ false }}">
+            <x-import component-from-global-scope="Ds3ShapeLighthouseDesignSystem_cc2087.Button" variant="text" on-click="{{ it.onClick }}" hint-size="64px,36px">View</x-import>
+            <span style="display:flex;color:var(--lh-error)">
+              <x-import component-from-global-scope="Ds3ShapeLighthouseDesignSystem_cc2087.Icon" name="Exclamation24" size="24" hint-size="24px,24px"></x-import>
+            </span>
+          </sc-if>
+        </div>
+      </sc-for>
+    </div>
+  </sc-if>
+  <sc-if value="{{ snack.show }}" hint-placeholder-val="{{ false }}">
+    <div style="position:fixed;left:16px;bottom:16px;z-index:60">
+      <x-import component-from-global-scope="Ds3ShapeLighthouseDesignSystem_cc2087.Snackbar" mode="{{ snack.mode }}" actions="{{ snack.actions }}" on-dismiss="{{ snack.onDismiss }}" hint-size="344px,64px">{{ snack.text }}</x-import>
+    </div>
+  </sc-if>
+  <sc-if value="{{ fail.show }}" hint-placeholder-val="{{ false }}">
+    <x-import component-from-global-scope="Ds3ShapeLighthouseDesignSystem_cc2087.Dialog" title="{{ fail.title }}" size="l" actions="{{ fail.actions }}" on-close="{{ fail.onClose }}" hint-size="480px,480px">
+      <div style="display:flex;flex-direction:column;gap:24px;padding-top:8px">
+        <sc-if value="{{ fail.hasSummary }}" hint-placeholder-val="{{ true }}">
+          <x-import component-from-global-scope="Ds3ShapeLighthouseDesignSystem_cc2087.Callout" mode="warning" icon="Exclamation24" hint-size="100%,56px">{{ fail.summary }}</x-import>
+        </sc-if>
+        <sc-for list="{{ fail.groups }}" as="g" hint-placeholder-count="2">
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <div style="display:flex;flex-direction:column;gap:2px">
+              <span style="font:500 14px/20px var(--lh-font);letter-spacing:0.1px;color:var(--lh-ink-high)">{{ g.reason }}</span>
+              <sc-if value="{{ g.hasNote }}" hint-placeholder-val="{{ false }}">
+                <span style="font:400 14px/20px var(--lh-font);letter-spacing:0.25px;color:var(--lh-ink-medium);text-wrap:pretty">{{ g.note }}</span>
+              </sc-if>
+            </div>
+            <sc-if value="{{ g.resolved }}" hint-placeholder-val="{{ false }}">
+              <div style="display:flex;align-items:center;gap:12px;min-height:48px;padding:8px 16px;border:1px solid var(--lh-border);border-radius:4px;box-sizing:border-box;color:var(--lh-success)">
+                <x-import component-from-global-scope="Ds3ShapeLighthouseDesignSystem_cc2087.Icon" name="CheckmarkCircle24" size="24" hint-size="24px,24px"></x-import>
+                <span style="font:400 14px/20px var(--lh-font);letter-spacing:0.25px;color:var(--lh-ink-high)">{{ g.doneText }}</span>
+              </div>
+            </sc-if>
+            <sc-if value="{{ g.open }}" hint-placeholder-val="{{ true }}">
+            <div style="border:1px solid var(--lh-border);border-radius:4px">
+              <sc-for list="{{ g.list }}" as="f" hint-placeholder-count="2">
+                <div style="display:flex;align-items:center;gap:16px;min-height:64px;padding:8px 16px;border-bottom:1px solid var(--lh-border);box-sizing:border-box">
+                  <span style="width:40px;height:40px;border:1px solid var(--lh-border);border-radius:4px;display:flex;align-items:center;justify-content:center;font:400 16px/24px var(--lh-font);color:var(--lh-ink-high);flex-shrink:0;box-sizing:border-box">{{ f.initials }}</span>
+                  <div style="display:flex;flex-direction:column;flex-grow:1;min-width:0">
+                    <span style="font:400 16px/24px var(--lh-font);letter-spacing:0.5px;color:var(--lh-ink-high)">{{ f.name }}</span>
+                    <span style="font:400 14px/20px var(--lh-font);letter-spacing:0.25px;color:var(--lh-ink-medium)">{{ f.sub }}</span>
+                  </div>
+                  <sc-if value="{{ g.running }}" hint-placeholder-val="{{ false }}">
+                    <x-import component-from-global-scope="Ds3ShapeLighthouseDesignSystem_cc2087.ProgressCircular" size="24" hint-size="24px,24px"></x-import>
+                  </sc-if>
+                </div>
+              </sc-for>
+            </div>
+            <sc-if value="{{ g.hasAction }}" hint-placeholder-val="{{ false }}">
+              <div style="display:flex;justify-content:flex-end">
+                <x-import component-from-global-scope="Ds3ShapeLighthouseDesignSystem_cc2087.Button" variant="outlined" disabled="{{ g.running }}" on-click="{{ g.onAction }}" hint-size="200px,36px">{{ g.actionLabel }}</x-import>
+              </div>
+            </sc-if>
+            </sc-if>
+          </div>
+        </sc-for>
+      </div>
+    </x-import>
+  </sc-if>
+  <sc-if value="{{ confirmSilent.show }}" hint-placeholder-val="{{ false }}">
+    <x-import component-from-global-scope="Ds3ShapeLighthouseDesignSystem_cc2087.Dialog" title="Install updates silently?" size="l" actions="{{ confirmSilent.actions }}" on-close="{{ confirmSilent.onClose }}" hint-size="480px,220px">{{ confirmSilent.text }}</x-import>
+  </sc-if>
+  <sc-if value="{{ confirmOff.show }}" hint-placeholder-val="{{ false }}">
+    <x-import component-from-global-scope="Ds3ShapeLighthouseDesignSystem_cc2087.Dialog" title="Turn off version control?" size="m" actions="{{ confirmOff.actions }}" hint-size="480px,200px">Your selected versions will be discarded and sites will update automatically to the latest version.</x-import>
+  </sc-if>
+  <sc-if value="{{ menu.show }}" hint-placeholder-val="{{ false }}">
+    <div onClick="{{ closeMenu }}" style="position:fixed;inset:0;z-index:90"></div>
+    <div style="position:fixed;top:{{ menu.top }};left:{{ menu.left }};z-index:91">
+      <x-import component-from-global-scope="Ds3ShapeLighthouseDesignSystem_cc2087.Menu" width="240" hint-size="240px,64px">
+        <x-import component-from-global-scope="Ds3ShapeLighthouseDesignSystem_cc2087.MenuItem" leading-icon="Faders24" on-click="{{ openSheet }}" hint-size="100%,48px">View &amp; manage</x-import>
+      </x-import>
+    </div>
+  </sc-if>
+  <sc-if value="{{ tip.show }}" hint-placeholder-val="{{ false }}">
+    <div style="position:fixed;top:{{ tip.top }};left:{{ tip.left }};width:340px;max-height:calc(100vh - {{ tip.top }} - 8px);overflow:hidden;background:#fff;border-radius:16px;box-shadow:var(--lh-elev-8);padding:8px 0;z-index:100;pointer-events:none;font:400 14px/20px var(--lh-font);letter-spacing:0.25px">
+      <sc-for list="{{ tip.items }}" as="it" hint-placeholder-count="7">
+        <div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:center;height:36px;padding:0 24px">
+          <span style="color:var(--lh-ink-high);overflow:hidden;text-overflow:ellipsis;white-space:nowrap">{{ it.name }}</span>
+          <span style="color:var(--lh-ink-medium)">{{ it.version }}</span>
+        </div>
+      </sc-for>
+    </div>
+  </sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;density&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Comfortable&quot;,&quot;Compact&quot;],&quot;default&quot;:&quot;Comfortable&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;groupShading&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;}}">
+const V = "Unite 4.11.3.0, TRIOS 4.4.1.5, TRIOS Patient Monitoring 8.18.3.0, + 11 more";
+const TREE = [
+  { id: "hq", name: "Smile Inc, HQ", childLabel: "3 children", children: [
+    { id: "east", country: "SE", name: "Smile Inc, Region East", childLabel: "6 children", vc: "On", version: V, status: "Update pending", statusKind: "neutral", statusNote: "Unite 5.11.3.0, + 13 more", date: "Requested 1 day ago", children: [
+      { id: "smith", country: "SE", name: "Dr. Smith", vc: "Off", version: V },
+      { id: "whitman", country: "SE", name: "Dr. Whitman", vc: "On", version: V },
+      { id: "patel", country: "SE", name: "Dr. Patel", vc: "On", version: "Unite 3.11.3.0, TRIOS 4.4.1.5, TRIOS Patient Monitoring 8.18.3.0, + 11 more", status: "Update recommended", statusKind: "warning" },
+      { id: "christensen", country: "SE", name: "Dr. Christensen", vc: "On", version: V },
+      { id: "jensen", country: "SE", name: "Dr. Jensen", vc: "On", version: V },
+      { id: "petersen", country: "SE", name: "Dr. Petersen", vc: "On", version: V },
+    ]},
+    { id: "west", country: "DK", name: "Smile Inc, Region West", childLabel: "4 children", vc: "On", version: V, children: [
+      { id: "simensen", country: "DK", name: "Dr. Simensen", vc: "On", version: "Unite 3.7.7.76 TRIOS 3.4.1.5, TRIOS Patient Monitoring 8.18.3.0, + 11 more", status: "Expired", statusKind: "error", date: "Expired Sep 3", dateError: true },
+    ]},
+    { id: "south", country: "DK", name: "Smile Inc, Region South", childLabel: "4 children", vc: "On", version: V, status: "Expiring soon", statusKind: "warning", date: "Expires Nov 3", children: [
+      { id: "houston", country: "DK", name: "Dr. Houston", vc: "On", version: V },
+      { id: "hart", country: "DK", name: "Dr. Hart", vc: "On", version: V },
+    ]},
+    { id: "north", country: "DK", name: "Smile Inc, Region North", childLabel: "4 children", vc: "On", version: V, children: [
+      { id: "nielsen", country: "DK", name: "Dr. Nielsen", vc: "On", version: V },
+      { id: "larsen", country: "DK", name: "Dr. Larsen", vc: "On", version: V },
+      { id: "berg", country: "DK", name: "Dr. Berg", vc: "On", version: V },
+      { id: "holm", country: "DK", name: "Dr. Holm", vc: "On", version: V },
+    ]},
+  ]},
+];
+const EXTRA = [
+  ["TRIOS Treatment Simulator", "12.2.1.0"], ["TRIOS Design Studio", "24.2.1.2"], ["Implant Studio", "24.2.1.2"],
+  ["Screw-retained restoration", "18.2.1.1"], ["Dental System", "2.24.1.0"], ["Ortho System", "2.24.1.0"],
+  ["Splint Studio", "1.4.2.0"], ["Smile Design", "3.1.0.4"], ["Automate", "1.9.3.0"],
+  ["Communicate", "5.2.0.1"], ["X1 Viewer", "2.3.1.0"],
+];
+const productsOf = (v) => {
+  const base = [...v.replace(/,?\s*\+\s*\d+ more$/, "").matchAll(/([A-Za-z][A-Za-z ]*?)\s+(\d[\d.]*)/g)].map(m => ({ name: m[1].trim(), version: m[2] }));
+  return base.concat(EXTRA.map(([name, version]) => ({ name, version })));
+};
+const pendingOf = (node) => node.pendingPicks ? productsOf(node.version || V).map(p => ({ ...p, pendingVersion: node.pendingPicks[p.name] || p.version })) : node.statusNote ? productsOf(node.version || V).map(p => {
+  const m = node.statusNote.match(new RegExp("^" + p.name + "\\s+(\\d[\\d.]*)"));
+  const s = p.version.split(".").map(Number);
+  return { ...p, pendingVersion: m ? m[1] : [s[0], s[1] + 1, 0, 0].join(".") };
+}) : [];
+const STEP_MIN = 4;
+const STEP_STONE = "4.0.0.0";
+const needsStep = (node) => { const u = productsOf(node.version || V)[0]; return parseInt(u.version, 10) < STEP_MIN; };
+const PARENT = {};
+(function idx(list, parent) { list.forEach(n => { PARENT[n.id] = parent; if (n.children) idx(n.children, n); }); })(TREE, null);
+const initialsOf = (name) => { const w = name.replace(/[^A-Za-z ]/g, "").split(/\s+/).filter(Boolean); return (w[0][0] + (w.length > 1 ? w[w.length - 1][0] : "")).toUpperCase(); };
+const COUNTRY_NAMES = { DK: "Denmark", SE: "Sweden", DE: "Germany", US: "United States" };
+const leaves = (n) => n.children ? n.children.flatMap(leaves) : [n.id];
+const units = (n) => [...(n.version ? [n.id] : []), ...(n.children || []).flatMap(units)];
+const allIds = (n) => [n.id, ...(n.children || []).flatMap(allIds)];
+
+class Component extends DCLogic {
+  revealMethod() {
+    const el = document.querySelector('[data-dd="__method"]');
+    if (!el) { this._methodSeen = false; return; }
+    if (this._methodSeen) return;
+    this._methodSeen = true;
+    let sc = el.parentElement;
+    while (sc && !(/(auto|scroll)/.test(getComputedStyle(sc).overflowY) && sc.scrollHeight > sc.clientHeight + 1)) sc = sc.parentElement;
+    if (sc) { const top = sc.scrollTop + el.getBoundingClientRect().top - sc.getBoundingClientRect().top - 16; sc.scrollTop = top; setTimeout(() => { sc.scrollTop = sc.scrollTop + el.getBoundingClientRect().top - sc.getBoundingClientRect().top - 16; }, 200); }
+    clearTimeout(this.flashT);
+    setTimeout(() => this.setState({ methodFlash: true }), 250);
+    this.flashT = setTimeout(() => this.setState({ methodFlash: false }), 1450);
+  }
+  state = { collapsed: { north: true }, selected: {}, chips: { expired: false, expiring: false, update: false } };
+
+  verColRef = (el) => {
+    if (!el || el === this.verEl) return;
+    this.verEl = el;
+    if (this.ro) this.ro.disconnect();
+    this.ro = new ResizeObserver(() => {
+      const w = el.getBoundingClientRect().width;
+      if (Math.abs(w - (this.state.verW || 0)) > 1) this.setState({ verW: w });
+    });
+    this.ro.observe(el);
+  };
+  componentDidMount() {
+    const tryAttach = () => {
+      const el = document.querySelector("[data-ver-col]");
+      if (el) this.verColRef(el); else this.attachT = setTimeout(tryAttach, 100);
+    };
+    tryAttach();
+    if (document.fonts) document.fonts.ready.then(() => { this.fontReady = true; this.forceUpdate(); });
+  }
+  componentDidUpdate(_, prev) {
+    const req = this.state.scrollReq;
+    if (!req || (prev.scrollReq && prev.scrollReq.t === req.t)) return;
+    const run = (tries) => {
+      const el = document.querySelector('[data-dd="' + req.name + '"]');
+      let sc = el && el.parentElement;
+      while (sc && getComputedStyle(sc).overflowY !== "auto") sc = sc.parentElement;
+      if (el && sc) sc.scrollTop = sc.scrollTop + el.getBoundingClientRect().top - sc.getBoundingClientRect().top - 16;
+      else if (tries > 0) requestAnimationFrame(() => run(tries - 1));
+    };
+    requestAnimationFrame(() => requestAnimationFrame(() => run(10)));
+  }
+  componentWillUnmount() { if (this.ro) this.ro.disconnect(); clearTimeout(this.attachT); }
+  textW(s) {
+    if (!this.ctx) this.ctx = document.createElement("canvas").getContext("2d");
+    this.ctx.font = '400 14px "Noto Sans", sans-serif';
+    return this.ctx.measureText(s).width + s.length * 0.25;
+  }
+  fitVersion(v) {
+    if (!v) return { versionBase: "", versionMore: "" };
+    const items = productsOf(v);
+    const avail = (this.state.verW || 600) - 48 - 4;
+    for (let k = items.length; k >= 1; k--) {
+      const text = items.slice(0, k).map(p => p.name + " " + p.version).join(", ");
+      const more = items.length - k;
+      const moreTxt = more ? "+ " + more + " more" : "";
+      const full = more ? text + ", " + moreTxt : text;
+      if (k === 1 || this.textW(full) <= avail) return { versionBase: more ? text + "," : text, versionMore: moreTxt };
+    }
+  }
+  eff(node) {
+    const f = null;
+    if (f) return { ...node, status: "Update failed", statusKind: "error", failReason: f, dateError: false, date: "Failed just now",
+      statusNote: f === "off" ? "Version control is off" : "Needs stepping-stone update" };
+    const o = (this.state.pendingOverrides || {})[node.id];
+    if (!o) return node;
+    const prods = productsOf(node.version || V);
+    return { ...node, status: "Update pending", statusKind: "neutral", date: "Requested just now", dateError: false, pendingPicks: o, waitCmd: !!(this.state.cmdOverrides || {})[node.id],
+      statusNote: prods[0].name + " " + o[prods[0].name] + ", + " + (prods.length - 1) + " more" };
+  }
+  findNode(id, list = TREE) {
+    for (const n of list) { if (n.id === id) return n; const f = n.children && this.findNode(id, n.children); if (f) return f; }
+    return null;
+  }
+  hasFailures() { const s = this.state.snack; return !!s && (s.failedOff.length + s.failedStep.length + (s.failedPending || []).length) > 0; }
+  progressItems() {
+    const p = this.state.progress;
+    if (!p) return [];
+    const base = { onClick: () => {}, cursor: "default", hoverBg: "transparent" };
+    if (!p.done) return [{ ...base, title: p.title, sub: p.sub, running: true, ok: false, failed: false }];
+    const s = this.state.snack || { ok: 0, failedOff: [], failedStep: [] };
+    const failed = s.failedOff.length + s.failedStep.length + (s.failedPending || []).length;
+    const n = (k) => k === 1 ? "1 site" : k + " sites";
+    const items = [];
+    if (s.ok) items.push({ ...base, title: "Updating version completed", sub: n(s.ok), running: false, ok: true, failed: false });
+    if (failed) items.push({ title: "Updating version failed", sub: n(failed), running: false, ok: false, failed: true, cursor: "pointer", hoverBg: "var(--lh-hover-black)",
+      onClick: (e) => { if (e && e.stopPropagation) e.stopPropagation(); clearTimeout(this.doneT); this.setState({ failDialog: true, popOpen: false, progress: null }); } });
+    return items;
+  }
+  snackVals() {
+    const s = this.state.snack;
+    if (!s || !s.quick || this.state.failDialog) return { show: false };
+    const failed = s.failedOff.length + s.failedStep.length + (s.failedPending || []).length;
+    return {
+      show: true, mode: failed ? "error" : "success",
+      text: s.total === 1 && failed ? "Version could not be updated." : failed ? `Changes saved for ${s.ok} of ${s.total} sites. ${failed} failed.` : (s.total === 1 ? `New version requested for ${s.name}.` : `Changes saved for ${s.total} sites.`),
+      actions: failed ? [{ label: "View", onClick: () => this.setState({ failDialog: true }) }] : undefined,
+      onDismiss: () => this.setState({ snack: null }),
+    };
+  }
+  runFix(key, ids) {
+    const s = this.state.snack;
+    this.setState(st => ({ fixes: { ...(st.fixes || {}), [key]: "running" } }));
+    setTimeout(() => {
+      const uniteName = productsOf(V)[0].name;
+      const pick = key === "step" ? { ...s.pick, [uniteName]: STEP_STONE } : s.pick;
+      this.setState(st => {
+        const sel = { ...st.selected }; ids.forEach(id => delete sel[id]);
+        const fixes = { ...(st.fixes || {}), [key]: "done" };
+        const fixable = ["off", "step"].filter(k => (k === "off" ? s.failedOff : s.failedStep).length);
+        const allDone = fixable.every(k => fixes[k] === "done") && !(s.failedPending || []).length;
+        return {
+          fixes, selected: sel,
+          vcOverrides: key === "off" ? { ...(st.vcOverrides || {}), ...Object.fromEntries(ids.map(id => [id, "On"])) } : st.vcOverrides,
+          pendingOverrides: { ...(st.pendingOverrides || {}), ...Object.fromEntries(ids.map(id => [id, pick])) },
+        };
+      });
+      const st = this.state; const fixes = { ...(st.fixes || {}), [key]: "done" };
+      const fixable = ["off", "step"].filter(k => (k === "off" ? s.failedOff : s.failedStep).length);
+      if (fixable.every(k => fixes[k] === "done") && !(s.failedPending || []).length) setTimeout(() => this.setState({ failDialog: false, snack: null, fixes: {} }), 1200);
+    }, 1500);
+  }
+  unresolvedCount() {
+    const s = this.state.snack; if (!s) return 0;
+    const f = this.state.fixes || {};
+    return (f.off === "done" ? 0 : s.failedOff.length) + (f.step === "done" ? 0 : s.failedStep.length) + (s.failedPending || []).length;
+  }
+  failVals() {
+    const s = this.state.snack;
+    if (!s || !this.state.failDialog) return { show: false };
+    const failed = s.failedOff.length + s.failedStep.length + (s.failedPending || []).length;
+    const item = (id, sub) => { const n = this.findNode(id); return { name: n.name, initials: initialsOf(n.name), sub }; };
+    const uniteTarget = Object.values(s.pick)[0];
+    const fixes = this.state.fixes || {};
+    return {
+      show: true,
+      title: failed === 1 ? "Changes for 1 site failed" : "Changes for " + failed + " sites failed",
+      groups: [
+        { key: "off", action: "Turn on and retry", doneText: "Version control turned on. Version requested.", ids: s.failedOff, text: "Version control is off", sub: (id) => (PARENT[id] || {}).name || "" },
+        { key: "step", action: "Update to Unite " + STEP_STONE, note: "Request Unite " + STEP_STONE + " first. Once installed, the selected version can be requested.", doneText: "Unite " + STEP_STONE + " requested.", ids: s.failedStep, text: "Stepping stone required", sub: (id) => "Current: Unite " + productsOf(this.findNode(id).version)[0].version },
+        { key: "pending", ids: s.failedPending || [], text: "Requested version already pending", note: "A pending version cannot be overwritten.", sub: (id) => "Pending: " + (this.eff(this.findNode(id)).statusNote || "") },
+      ].filter(g => g.ids.length).map(g => {
+        const st = fixes[g.key];
+        return { header: (g.ids.length === 1 ? "1 site" : g.ids.length + " sites") + " – " + g.text, list: g.ids.map(id => item(id, g.sub(id))),
+          reason: g.text, hasNote: !!g.note && st !== "done", note: g.note || "",
+          calloutText: (g.ids.length === 1 ? "1 site" : g.ids.length + " sites") + " – " + g.text + "." + (g.note ? " " + g.note : ""),
+          hasAction: !!g.action && st !== "done", actionLabel: g.action || "", running: st === "running", resolved: st === "done", open: st !== "done",
+          doneText: g.doneText || "", onAction: () => this.runFix(g.key, g.ids) };
+      }),
+      hasSummary: this.unresolvedCount() > 0,
+      summary: "Software version wasn't updated for " + (this.unresolvedCount() === 1 ? "1 site" : this.unresolvedCount() + " sites") + ".",
+      hasOff: s.failedOff.length > 0, hasStep: s.failedStep.length > 0,
+      offText: (s.failedOff.length === 1 ? "1 site has" : s.failedOff.length + " sites have") + " version control turned off. Turn it on to request a version.",
+      stepText: (s.failedStep.length === 1 ? "1 site needs" : s.failedStep.length + " sites need") + " a stepping-stone update to Unite " + STEP_MIN + ".x before " + (uniteTarget ? "Unite " + uniteTarget : "this version") + " can be installed.",
+      offList: s.failedOff.map(id => item(id, (PARENT[id] || {}).name || "")),
+      stepList: s.failedStep.map(id => item(id, "Current: Unite " + productsOf(this.findNode(id).version)[0].version)),
+      actions: [{ label: "Close", variant: "outlined", onClick: () => this.setState({ failDialog: false }) }],
+      onClose: () => this.setState({ failDialog: false }),
+    };
+  }
+  selectedNodeIds() {
+    const out = [];
+    const walk = (n) => { if (this.checkState(n).checked) out.push(n.id); (n.children || []).forEach(walk); };
+    TREE.forEach(walk);
+    return out;
+  }
+  vcOf(node) { return (this.state.vcOverrides || {})[node.id] ?? node.vc; }
+  sheetVals() {
+    const multi = this.state.sheetId === "__multi";
+    const doneC = this.state.doneCountries || {};
+    const allSel = multi ? this.selectedNodeIds().filter(id => { const n = this.findNode(id); return n.version && !doneC[n.country]; }) : null;
+    const countryCounts = {};
+    if (multi) allSel.forEach(id => { const n = this.findNode(id); if (n.version && n.country) countryCounts[n.country] = (countryCounts[n.country] || 0) + 1; });
+    const countryKeys = Object.keys(countryCounts).sort((a, b) => countryCounts[b] - countryCounts[a]);
+    const multiCountry = countryKeys.length > 1;
+    const country = multi ? (countryKeys.includes(this.state.country) ? this.state.country : countryKeys[0]) : null;
+    const selIds = multi ? (multiCountry ? allSel.filter(id => this.findNode(id).country === country) : allSel) : null;
+    const selVcs = multi ? [...new Set(selIds.map(id => this.findNode(id)).filter(n => n.vc).map(n => this.vcOf(n)))] : [];
+    const vcMixed = multi && selVcs.length > 1 && this.state.draftVc == null;
+    const labelMax = multi ? 300 : 176;
+    const multiVc = multi && selIds.map(id => this.findNode(id)).filter(n => n.vc).every(n => this.vcOf(n) === "Off") ? "Off" : "On";
+    const raw = multi ? { id: "__multi", name: multiCountry ? selIds.length + " of " + allSel.length + " selected sites · " + COUNTRY_NAMES[country] : selIds.length + " selected sites", vc: multiVc, version: V } : this.state.sheetId && this.findNode(this.state.sheetId);
+    const node = raw && (multi ? raw : this.eff(raw));
+    const targets = multi ? selIds : node ? [node.id] : [];
+    if (!node) return { show: false, products: [] };
+    const saved = this.vcOf(node) !== "Off";
+    const on = this.state.draftVc ?? saved;
+    const adding = !!this.state.adding && (!multi || on);
+    const picks = this.state.picks || {};
+    const dirty = on !== saved || (adding && Object.keys(picks).length > 0);
+    const DS = window.Ds3ShapeLighthouseDesignSystem_cc2087;
+    const close = () => this.setState({ sheetId: null, draftVc: null, adding: false, picks: {}, showErrors: false, updateMode: null, methodTouched: false });
+    const allProducts = productsOf(node.version || V);
+    const silentOf = (v) => { const s = v.split(".").map(Number); return [s[0] + 1, 0, 0, 0].join("."); };
+    const silentCount = allProducts.filter(p => picks[p.name] === silentOf(p.version)).length;
+    const allPicked = allProducts.every(p => picks[p.name]);
+    const mode = this.state.updateMode;
+    const save = () => {
+      if (adding) {
+        let missing = allProducts.filter(p => !picks[p.name]);
+        if (missing.length) {
+          const name = missing[0].name;
+          const run = () => {
+            const el = document.querySelector('[data-dd="' + name + '"]');
+            let sc = el && el.parentElement;
+            while (sc && getComputedStyle(sc).overflowY !== "auto") sc = sc.parentElement;
+            if (el && sc) sc.scrollTop = sc.scrollTop + el.getBoundingClientRect().top - sc.getBoundingClientRect().top - 16;
+          };
+          this.setState({ showErrors: true, openDd: null });
+          setTimeout(run, 100);
+          setTimeout(run, 300);
+          return;
+        }
+        if (false) {
+          const n = multi ? targets.filter(id => this.findNode(id).version).length : 1;
+          this.pendingCommit = commit;
+          this.setState({ confirmSilent: { text: (silentCount === 1 ? "1 version" : silentCount + " versions") + " will install silently on " + (n === 1 ? "1 site" : n + " sites") + " in the background, as soon as the update is received. You can also wait and trigger the installation from the command line." } });
+          return;
+        }
+      }
+      commit();
+    };
+    const commit = () => {
+      const vcChanged = this.state.draftVc != null;
+      const vcAfter = (id) => vcChanged ? (on ? "On" : "Off") : this.vcOf(this.findNode(id));
+      const verTargets = adding ? targets.filter(id => this.findNode(id).version) : [];
+      const failedOff = verTargets.filter(id => vcAfter(id) === "Off");
+      const failedPending = multi ? verTargets.filter(id => !failedOff.includes(id) && !!this.eff(this.findNode(id)).statusNote) : [];
+      const failedStep = verTargets.filter(id => !failedOff.includes(id) && !failedPending.includes(id) && needsStep(this.findNode(id)));
+      const ok = verTargets.filter(id => !failedOff.includes(id) && !failedStep.includes(id) && !failedPending.includes(id));
+      const pickCopy = { ...picks };
+      const cmdMode = mode === "command" && silentCount > 0;
+      const sn0 = this.state.snack && !this.state.snack.quick ? this.state.snack : null;
+      const prevFailed = new Set([...Object.keys(this.state.failedOverrides || {}), ...(sn0 ? [...sn0.failedOff, ...sn0.failedStep, ...(sn0.failedPending || [])] : [])]);
+      const rest = multi && multiCountry ? allSel.filter(id => !selIds.includes(id) && !prevFailed.has(id)) : [];
+      const nextCountry = rest.length ? this.findNode(rest[0]).country : null;
+      const busy = !!(this.state.progress && !this.state.progress.done);
+      const carry = busy || (!!sn0 && this.unresolvedCount() > 0);
+      const prevUpdating = busy ? (this.state.updatingIds || []) : [];
+      this.setState(s => ({
+        sheetId: rest.length ? "__multi" : null, country: nextCountry || s.country, doneCountries: rest.length ? { ...(s.doneCountries || {}), [country]: selIds.length } : {}, openDd: null,
+        vcOverrides: !vcChanged ? s.vcOverrides : { ...(s.vcOverrides || {}), ...Object.fromEntries(targets.filter(id => this.findNode(id).vc).map(id => [id, on ? "On" : "Off"])) },
+        selected: rest.length ? Object.fromEntries(rest.map(id => [id, true])) : multi && !verTargets.length ? {} : s.selected, draftVc: null, adding: !!rest.length, picks: {}, showErrors: false, updateMode: null, methodTouched: false,
+        progress: verTargets.length && multi ? (() => { const all = [...prevUpdating, ...verTargets]; return { title: "Updating version", sub: all.length === 1 ? this.findNode(all[0]).name : all.length + " sites", done: false }; })() : (busy ? s.progress : null),
+        popOpen: !!verTargets.length && multi,
+        updatingIds: multi ? [...prevUpdating, ...verTargets] : prevUpdating,
+        snack: carry ? s.snack : null, failDialog: false, fixes: carry ? s.fixes : {},
+      }));
+      if (!verTargets.length) return;
+      if (!multi) {
+        clearTimeout(this.snackT);
+        this.setState(s => ({
+          progress: null, popOpen: false, updatingIds: [],
+          pendingOverrides: { ...(s.pendingOverrides || {}), ...Object.fromEntries(ok.map(id => [id, pickCopy])) }, cmdOverrides: { ...(s.cmdOverrides || {}), ...Object.fromEntries(ok.map(id => [id, cmdMode])) },
+          snack: { quick: true, total: verTargets.length, ok: ok.length, failedOff, failedStep, pick: pickCopy, name: this.findNode(verTargets[0]).name },
+        }));
+        if (!failedOff.length && !failedStep.length) this.snackT = setTimeout(() => this.setState(s => s.snack && s.snack.quick ? { snack: null } : null), 5000);
+        return;
+      }
+      clearTimeout(this.popT); clearTimeout(this.doneT);
+      this.runs = (this.runs || 0) + 1;
+      this.popT = setTimeout(() => this.setState({ popOpen: false }), 1000);
+      setTimeout(() => { const el = document.querySelector("[data-update-icon]"); if (el) this.setState({ popRight: (window.innerWidth - el.getBoundingClientRect().right) + "px" }); }, 30);
+      setTimeout(() => {
+        this.runs--;
+        const last = this.runs === 0;
+        if (last) clearTimeout(this.popT);
+        if (last) this.doneT = setTimeout(() => this.setState(s => { const sn = s.snack; const hasFail = sn && (sn.failedOff.length + sn.failedStep.length + (sn.failedPending || []).length) > 0; return hasFail ? { popOpen: false } : { progress: null, popOpen: false }; }), 6000);
+        this.setState(s => ({
+          progress: last ? { ...s.progress, title: "Updating version completed", done: true } : s.progress,
+          updatingIds: (s.updatingIds || []).filter(id => !verTargets.includes(id)),
+          popOpen: last ? true : s.popOpen,
+          pendingOverrides: { ...(s.pendingOverrides || {}), ...Object.fromEntries(ok.map(id => [id, pickCopy])) }, cmdOverrides: { ...(s.cmdOverrides || {}), ...Object.fromEntries(ok.map(id => [id, cmdMode])) },
+          failedOverrides: { ...Object.fromEntries(Object.entries(s.failedOverrides || {}).filter(([id]) => !ok.includes(id))), ...Object.fromEntries(failedOff.map(id => [id, "off"])), ...Object.fromEntries(failedStep.map(id => [id, "step"])) },
+          snack: s.snack && !s.snack.quick ? { total: s.snack.total + verTargets.length, ok: s.snack.ok + ok.length, failedOff: [...s.snack.failedOff, ...failedOff], failedStep: [...s.snack.failedStep, ...failedStep], failedPending: [...(s.snack.failedPending || []), ...failedPending], pick: { ...s.snack.pick, ...pickCopy } } : { total: verTargets.length, ok: ok.length, failedOff, failedStep, failedPending, pick: pickCopy },
+          selected: { ...Object.fromEntries(Object.entries(s.selected || {}).filter(([id]) => !verTargets.includes(id))), ...Object.fromEntries([...failedOff, ...failedStep, ...failedPending].map(id => [id, true])) },
+        }));
+      }, 5000);
+    };
+    const footer = DS ? React.createElement("div", { style: { display: "flex", flexDirection: "column", gap: 8, width: "100%" } },
+      React.createElement(DS.Button, { variant: "contained", fullWidth: true, disabled: !dirty, onClick: save }, "Save changes"),
+      React.createElement(DS.Button, { variant: "outlined", fullWidth: true, onClick: close }, "Close")) : null;
+    return {
+      show: true, name: node.name, vcOn: on, footer,
+      vcOff: !on,
+      showMethod: adding && allPicked && silentCount > 0,
+      waitCmd: mode === "command",
+      toggleCmd: (e) => { if (e && e.stopPropagation) e.stopPropagation(); this.setState(s => ({ updateMode: s.updateMode === "command" ? null : "command", methodTouched: true })); },
+      methodIntro: silentCount === 1 ? "1 selected version supports silent updates and will be installed in the background." : silentCount + " selected versions support silent updates and will be installed in the background.",
+      _oldIntro: "ld be installed.",
+      methodError: !!this.state.showErrors && !mode,
+      methods: [
+        { key: "silent", label: "Update silently", desc: "Installs in the background without interrupting users." },
+        { key: "command", label: "Wait for command line", desc: "Installs only when triggered from the command line." },
+        { key: "standard", label: "Standard update", desc: "Users are notified and install the update themselves." },
+      ].map(m => ({ ...m, checked: mode === m.key, onPick: () => this.setState({ updateMode: m.key }) })),
+      addTipText: on ? "Request new version" : "Turn on version control to request a version",
+      onVc: (v) => {
+        if (!v && adding && Object.keys(picks).length) this.setState({ confirmOff: true });
+        else if (!v) this.setState({ draftVc: false, adding: false, picks: {}, showErrors: false, updateMode: null, methodTouched: false, openDd: null });
+        else this.setState(multi ? { draftVc: true, adding: true } : { draftVc: true });
+      },
+      adding, notAdding: !adding,
+      multi, single: !multi,
+      multiCountry: multiCountry || Object.keys(doneC).length > 0,
+      countryIntro: "Selected sites are in " + (countryKeys.length + Object.keys(doneC).length) + " countries. Software can be updated in one country at a time. Sites in other countries stay selected after saving.",
+      countries: [...countryKeys.map(k => ({ kind: "choice", active: k === country, label: COUNTRY_NAMES[k], chipLabel: COUNTRY_NAMES[k] + " (" + countryCounts[k] + ")", sub: countryCounts[k] === 1 ? "1 site" : countryCounts[k] + " sites", checked: k === country,
+        onPick: () => this.setState({ country: k, picks: {}, showErrors: false, updateMode: null, methodTouched: false, openDd: null }) })), ...Object.keys(doneC).map(k => ({ kind: "filter", active: true, done: true, checked: false, label: COUNTRY_NAMES[k], chipLabel: COUNTRY_NAMES[k] + " (" + doneC[k] + ")", onPick: undefined }))],
+      cols: multi ? "minmax(0,1fr)" : "minmax(0,1fr) minmax(0,1fr)",
+      vcMixed: vcMixed, vcNotMixed: !vcMixed,
+      pending: !!node.statusNote && !adding && !multi,
+      showCurrentOnly: !adding && !node.statusNote && !multi,
+      pendingRows: pendingOf(node),
+      width: multi ? 400 : adding || node.statusNote ? 560 : 400,
+      innerMax: adding ? "558px" : "398px",
+      onAdd: () => this.setState({ adding: true, picks: {}, addTip: false, showErrors: false }),
+      onRemove: () => this.setState({ adding: false, picks: {}, showErrors: false, updateMode: null, methodTouched: false }),
+      products: productsOf(node.version || V).map((p, i) => {
+        const seg = p.version.split(".").map(Number);
+        const options = [
+          [seg[0] + 1, 0, 0, 0], [seg[0], seg[1] + 1, 0, 0], [seg[0], seg[1], seg[2] + 1, 0],
+        ].map(a => a.join("."));
+        const disabled = i > 0 && !picks[productsOf(node.version || V)[0].name];
+        return {
+          ...p, options,
+          fieldLabel: React.createElement("span", { style: { display: "block", maxWidth: labelMax, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" } }, p.name),
+          nameTipShow: this.state.nameTip === p.name && !this.state.openDd,
+          tipText: disabled ? "Select a " + productsOf(node.version || V)[0].name + " version first" : p.name,
+          nameTipEnter: () => {
+            clearTimeout(this.nameTipT);
+            if (disabled) { this.nameTipT = setTimeout(() => this.setState({ nameTip: p.name }), 500); return; }
+            if (this.textW(p.name) * (picks[p.name] ? 12 / 14 : 16 / 14) > labelMax) this.setState({ nameTip: p.name }); },
+          fieldProps: { style: { width: "100%", minWidth: 0 }, placeholder: multi && i === 0 ? "Select version" : undefined, error: !!this.state.showErrors && !picks[p.name] && !disabled, supportingText: this.state.showErrors && !picks[p.name] && !disabled ? "Select a version" : undefined, readOnly: true, inputProps: { readOnly: true, style: { cursor: "inherit" } } },
+          newVal: picks[p.name] || "",
+          disabled,
+          cursor: disabled ? "default" : "pointer",
+          open: this.state.openDd === p.name,
+          caret: this.state.openDd === p.name ? "CaretSmallUp24" : "CaretSmallDown24",
+          ddLeft: (this.state.ddPos || {}).left, ddTop: (this.state.ddPos || {}).top, ddWidth: (this.state.ddPos || {}).width,
+          ddDown: !(this.state.ddPos || {}).up,
+          onToggle: (e) => {
+            if (disabled) return;
+            if (this.state.openDd === p.name) { this.setState({ openDd: null }); return; }
+            const r = e.currentTarget.getBoundingClientRect();
+            const mh = options.length * 48 + 16;
+            const up = r.bottom + mh > window.innerHeight - 8 && r.top - mh > 8;
+            this.setState({ openDd: p.name, nameTip: null, ddPos: { left: r.left + "px", width: r.width + "px", top: (up ? r.top - mh - 4 : r.top + 56) + "px", up } });
+          },
+          opts: options.map((o, j) => ({
+            label: o, selected: picks[p.name] === o, silent: j === 0,
+            tipShow: this.state.silentTip === p.name + o,
+            tipEnter: () => { clearTimeout(this.silentT); this.setState({ silentTip: p.name + o }); },
+            onPick: (e) => { e && e.stopPropagation && e.stopPropagation(); this.setState(s => ({ picks: { ...(s.picks || {}), [p.name]: o }, openDd: null, silentTip: null })); clearTimeout(this.revealT); this.revealT = setTimeout(() => this.revealMethod(), 150); },
+          })),
+        };
+      }),
+    };
+  }
+  toggleNode(node) {
+    this.setState(s => ({ collapsed: { ...s.collapsed, [node.id]: !s.collapsed[node.id] } }));
+  }
+  setChecked(node, on) {
+    this.setState(s => {
+      const sel = { ...s.selected };
+      units(node).forEach(id => { if (on) sel[id] = true; else delete sel[id]; });
+      return { selected: sel };
+    });
+  }
+  checkState(node) {
+    if (node.version) { const own = !!this.state.selected[node.id]; const l = units(node); const n = l.filter(id => this.state.selected[id]).length; return { checked: own, indeterminate: !own && n > 0 }; }
+    const l = units(node);
+    const n = l.filter(id => this.state.selected[id]).length;
+    return { checked: l.length > 0 && n === l.length, indeterminate: n > 0 && n < l.length };
+  }
+
+  renderVals() {
+    const compact = this.props.density === "Compact";
+    const shade = this.props.groupShading ?? true;
+    const rows = [];
+    const walk = (rawNode, depth) => {
+      const node = this.eff(rawNode);
+      const hasChildren = !!node.children;
+      const open = hasChildren && !this.state.collapsed[node.id];
+      const cs = this.checkState(node);
+      const groupBg = hasChildren && shade ? "var(--lh-grey-2)" : "#fff";
+      rows.push({
+        name: node.name, childLabel: node.childLabel,
+        initials: (() => { const w = node.name.replace(/[^A-Za-z ]/g, "").split(/\s+/).filter(Boolean); return (w[0][0] + (w.length > 1 ? w[w.length - 1][0] : "")).toUpperCase(); })(),
+        vc: node.vc ? this.vcOf(node) : "", country: node.country ? COUNTRY_NAMES[node.country] : "", version: node.version || "",
+        ...this.fitVersion(node.version),
+        menuOpen: this.state.menu?.id === node.id,
+        onMenu: (e) => {
+          const r = e.currentTarget.getBoundingClientRect();
+          this.setState({ tip: null, menu: { id: node.id, top: r.bottom + 4 + "px", left: Math.max(8, r.right - 240) + "px" } });
+        },
+        noteCursor: node.failReason ? "pointer" : "default",
+        noteDecoration: node.failReason ? "underline dotted" : "none",
+        onNoteClick: node.failReason ? () => this.setState({ failDialog: true, failFocus: null }) : undefined,
+        onPendEnter: (e) => {
+          if (!node.statusNote || node.failReason) return;
+          const r = e.currentTarget.getBoundingClientRect();
+          const items = pendingOf(node).map(p => ({ name: p.name, version: p.pendingVersion }));
+          clearTimeout(this.richT); const _t = { top: r.bottom + 8 + "px", left: Math.min(r.left, window.innerWidth - 348) + "px", items }; this.richT = setTimeout(() => this.setState({ tip: _t }), 500);
+        },
+        onVerEnter: (e) => {
+          if (!node.version) return;
+          const r = e.currentTarget.getBoundingClientRect();
+          const items = productsOf(node.version);
+          const top = r.bottom + 8;
+          const left = Math.min(r.left, window.innerWidth - 348);
+          clearTimeout(this.richT); const _t = { top: top + "px", left: left + "px", items }; this.richT = setTimeout(() => this.setState({ tip: _t }), 500);
+        },
+        status: node.status || "", statusKind: node.statusKind || "neutral",
+        locked: (this.state.updatingIds || []).includes(node.id),
+        hasStatus: !!node.status && !(this.state.updatingIds || []).includes(node.id), hasStatusNote: !!node.statusNote && !(this.state.updatingIds || []).includes(node.id), statusNote: node.statusNote || "", waitCmd: !!node.waitCmd && !(this.state.updatingIds || []).includes(node.id),
+        date: (this.state.updatingIds || []).includes(node.id) ? "" : node.date || "", dateColor: node.dateError ? "var(--lh-error)" : "var(--lh-ink-high)",
+        hasChildren, isLeaf: !hasChildren,
+        caret: open ? "CaretSmallDown24" : "CaretSmallRight24",
+        indent: depth * 48 + "px",
+        bg: this.state.sheetId === node.id ? "color-mix(in srgb, var(--lh-primary) 12%, #fff)" : cs.checked && node.version ? "color-mix(in srgb, var(--lh-primary) 8%, #fff)" : groupBg,
+        hoverBg: this.state.sheetId === node.id ? "color-mix(in srgb, var(--lh-primary) 12%, #fff)" : cs.checked && node.version ? "color-mix(in srgb, var(--lh-primary) 12%, #fff)" : (hasChildren && shade ? "var(--lh-grey-6)" : "var(--lh-grey-2)"),
+        checked: cs.checked, indeterminate: cs.indeterminate,
+        onToggle: () => this.toggleNode(node),
+        onCheck: (c) => this.setChecked(node, c),
+        selectable: !!node.version, notSelectable: !node.version,
+        onRowClick: (e) => {
+          if (!node.version) return;
+          if (e.target.closest && e.target.closest("button,input,a,label,[role=button],[role=menu],[role=menuitem]")) return;
+          if ((this.state.updatingIds || []).includes(node.id)) return;
+          this.setChecked(node, !cs.checked);
+        },
+      });
+      if (open) node.children.forEach(c => walk(c, depth + 1));
+    };
+    TREE.forEach(n => walk(n, 0));
+    const root = { children: TREE };
+    const rs = this.checkState(root);
+    const chipDefs = [["expired", "Expired (1)"], ["expiring", "Expiring soon (1)"], ["update", "Update recommended (1)"]];
+    const tip = this.state.tip;
+    const selCount = this.selectedNodeIds().filter(id => this.findNode(id).version).length;
+    return {
+      rows,
+      tip: tip ? { show: true, ...tip } : { show: false, items: [] },
+      selecting: selCount > 0, notSelecting: selCount === 0,
+      selLabel: selCount === 1 ? "1 site selected" : selCount + " sites selected",
+      selFail: false && this.unresolvedCount() > 0 && !this.state.failDialog && !(this.state.progress && !this.state.progress.done) ? { show: true, text: this.unresolvedCount() + " failed",
+        onView: () => { clearTimeout(this.doneT); this.setState({ failDialog: true, popOpen: false, progress: null }); } } : { show: false },
+      clearSelection: () => this.setState({ selected: {} }),
+      manageSelected: () => this.setState({ country: null, doneCountries: {}, sheetId: "__multi", menu: null, draftVc: null, adding: true, picks: {}, showErrors: false, updateMode: null, methodTouched: false }),
+      menu: this.state.menu ? { show: true, ...this.state.menu } : { show: false },
+      openSheet: () => this.setState(s => ({ sheetId: s.menu && s.menu.id, menu: null, draftVc: null, adding: false, picks: {}, showErrors: false, updateMode: null, methodTouched: false })),
+      closeSheet: () => this.setState({ sheetId: null, draftVc: null, adding: false, picks: {}, showErrors: false, updateMode: null, methodTouched: false }),
+      sheet: this.sheetVals(),
+      methodBg: this.state.methodFlash ? "color-mix(in srgb, var(--lh-primary) 16%, transparent)" : "transparent",
+      navOpen: !this.state.navRail, navRail: !!this.state.navRail,
+      toggleNav: () => { clearTimeout(this.railT); this.setState(s => ({ navRail: !s.navRail, railTip: null })); },
+      railTip: this.state.railTip ? { show: true, ...this.state.railTip } : { show: false },
+      railTipEnter: (e) => {
+        const el = e.currentTarget; clearTimeout(this.railT);
+        this.railT = setTimeout(() => { const b = el.getBoundingClientRect(); this.setState({ railTip: { text: el.dataset.tip, top: (b.top + 8) + "px", left: (b.right - 8) + "px" } }); }, 500);
+      },
+      railTipLeave: () => { clearTimeout(this.railT); if (this.state.railTip) this.setState({ railTip: null }); },
+      addTipShow: !!this.state.addTip,
+      progress: this.state.progress ? { show: true, ...this.state.progress, items: this.progressItems(), right: this.state.popRight || "16px", showIcon: !this.state.progress.done || this.hasFailures(), badge: this.state.progress.done && this.hasFailures(), running: !this.state.progress.done, popShow: !!this.state.popOpen, popOpen: !!this.state.popOpen,
+        togglePop: () => { clearTimeout(this.popT); this.setState(s => ({ popOpen: !s.popOpen })); } } : { show: false, running: false, done: false, popShow: false, showIcon: false },
+      snack: this.snackVals(),
+      fail: this.failVals(),
+      confirmSilent: this.state.confirmSilent ? { show: true, text: this.state.confirmSilent.text,
+        onClose: () => this.setState({ confirmSilent: null }),
+        actions: [
+          { label: "Cancel", variant: "text", onClick: () => this.setState({ confirmSilent: null }) },
+          { label: "Wait for command line", variant: "outlined", onClick: () => { this.setState({ confirmSilent: null, updateMode: "command" }); this.pendingCommit && this.pendingCommit(); } },
+          { label: "Install now", variant: "contained", onClick: () => { this.setState({ confirmSilent: null }); this.pendingCommit && this.pendingCommit(); } },
+        ] } : { show: false },
+      confirmOff: this.state.confirmOff ? { show: true, actions: [
+        { label: "Cancel", variant: "text", onClick: () => this.setState({ confirmOff: false }) },
+        { label: "Turn off", variant: "contained", onClick: () => this.setState({ confirmOff: false, draftVc: false, adding: false, picks: {}, showErrors: false, updateMode: null, methodTouched: false, openDd: null }) },
+      ] } : { show: false },
+      nameTipLeave: () => { clearTimeout(this.nameTipT); if (this.state.nameTip) this.setState({ nameTip: null }); },
+      closeDropdown: () => this.setState({ openDd: null, silentTip: null }),
+      silentTipLeave: () => { clearTimeout(this.silentT); if (this.state.silentTip) this.setState({ silentTip: null }); },
+      addTipEnter: () => { clearTimeout(this.addTipT); this.addTipT = setTimeout(() => this.setState({ addTip: true }), 500); },
+      addTipLeave: () => { clearTimeout(this.addTipT); if (this.state.addTip) this.setState({ addTip: false }); },
+      closeMenu: () => this.setState({ menu: null }),
+      hideTip: () => { clearTimeout(this.richT); if (this.state.tip) this.setState({ tip: null }); },
+      rowHeight: compact ? "48px" : "56px",
+      allChecked: rs.checked, allIndeterminate: rs.indeterminate,
+      toggleAll: (c) => this.setChecked(root, c),
+      chips: chipDefs.map(([k, label]) => ({
+        label, active: this.state.chips[k],
+        onClick: () => this.setState(s => ({ chips: { ...s.chips, [k]: !s.chips[k] } })),
+      })),
+    };
+  }
+}
+</script>
+</body>
+</html>
